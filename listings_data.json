@@ -1,0 +1,122 @@
+{
+    "apartments": [
+      {
+        "title": "Luxurious Apartment in Nairobi",
+        "description": "This spacious and luxurious apartment is located in the heart of Nairobi, close to all amenities.",
+        "price": 20000,
+        "location": "Nairobi",
+        "image": "https://images.unsplash.com/photo-1556767578-42b045bc7b0d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXBhcnRtZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+        "num_bedrooms": 2,
+        "num_bathrooms": 2,
+        "size": 150,
+        "amenities": "Swimming pool, gym, parking, 24-hour security",
+        "rules": "No smoking, no pets",
+        "contact_info": "John Doe, johndoe@gmail.com"
+      },
+      {
+        "title": "Modern Apartment in Mombasa",
+        "description": "This modern and sleek apartment is located in the coastal city of Mombasa, just steps away from the beach.",
+        "price": 18000,
+        "location": "Mombasa",
+        "image": "https://media-cdn.tripadvisor.com/media/photo-s/0c/3e/7d/85/luxurious-2-bedroom.jpg",
+        "num_bedrooms": 2,
+        "num_bathrooms": 1,
+        "size": 120,
+        "amenities": "Swimming pool, gym, parking, 24-hour security",
+        "rules": "No smoking, no parties",
+        "contact_info": "Jane Smith, janesmith@gmail.com"
+      },
+      {
+        "title": "Cozy Apartment in Kisumu",
+        "description": "This cozy apartment is located in the lakeside city of Kisumu, close to all amenities.",
+        "price": 12000,
+        "location": "Kisumu",
+        "image": "https://media-cdn.tripadvisor.com/media/photo-s/1c/3d/9c/08/a-2-bedroom-apartment.jpg",
+        "num_bedrooms": 2,
+        "num_bathrooms": 1,
+        "size": 100,
+        "amenities": "Parking, 24-hour security",
+        "rules": "No smoking, no pets",
+        "contact_info": "Peter Mwangi, petermwangi@gmail.com"
+      },
+      {
+        "title": "Spacious Apartment in Nakuru",
+        "description": "This spacious apartment is located in the bustling city of Nakuru, close to all amenities.",
+        "price": 15000,
+        "location": "Nakuru",
+        "image": "https://media-cdn.tripadvisor.com/media/photo-s/0f/2a/2a/54/luxury-2-bedroom-apartment.jpg",
+        "num_bedrooms": 2,
+        "num_bathrooms": 1,
+        "size": 130,
+        "amenities": "Parking, 24-hour security",
+        "rules": "No smoking, no pets",
+        "contact_info": "Mary Kamau, marykamau@gmail.com"
+      },
+      {
+        "title": "Luxury 3 Bedroom Apartment",
+        "description": "This luxurious apartment features spacious living areas, modern amenities, and stunning city views.",
+        "price": 25000,
+        "location": "Nairobi",
+        "image": "luxury_apartment1.jpg",
+        "num_bedrooms": 3,
+        "num_bathrooms": 2,
+        "size": 150,
+        "amenities": "Swimming pool, gym, parking, 24/7 security",
+        "rules": "No smoking, no pets, no loud music after 10pm",
+        "contact_info": "Contact us at 0723 456 789 for more information."
+      },
+      {
+        "title": "Modern 2 Bedroom Apartment",
+        "description": "This modern apartment features sleek design, comfortable furnishings, and convenient location.",
+        "price": 18000,
+        "location": "Mombasa",
+        "image": "modern_apartment1.jpg",
+        "num_bedrooms": 2,
+        "num_bathrooms": 1,
+        "size": 100,
+        "amenities": "Parking, balcony, 24/7 security",
+        "rules": "No smoking, no pets, no parties",
+        "contact_info": "Contact us at 0712 345 678 for more information."
+      },
+      {
+        "title": "Spacious 4 Bedroom Penthouse",
+        "description": "This stunning penthouse features panoramic views, high-end finishes, and luxurious amenities.",
+        "price": 45000,
+        "location": "Nairobi",
+        "image": "penthouse1.jpg",
+        "num_bedrooms": 4,
+        "num_bathrooms": 3,
+        "size": 250,
+        "amenities": "Swimming pool, gym, parking, 24/7 security",
+        "rules": "No smoking, no pets, no loud music after 10pm",
+        "contact_info": "Contact us at 0734 567 890 for more information."
+      },
+      {
+        "title": "Cozy 1 Bedroom Apartment",
+        "description": "This cozy apartment features comfortable furnishings, modern amenities, and convenient location.",
+        "price": 10000,
+        "location": "Nakuru",
+        "image": "cozy_apartment1.jpg",
+        "num_bedrooms": 1,
+        "num_bathrooms": 1,
+        "size": 50,
+        "amenities": "Parking, balcony, 24/7 security",
+        "rules": "No smoking, no pets, no parties",
+        "contact_info": "Contact us at 0720 987 654 for more information."
+      },
+      {
+        "title": "Luxury 2 Bedroom Apartment",
+        "description": "This luxurious apartment features spacious living areas, modern amenities, and stunning city views.",
+        "price": 22000,
+        "location": "Kisumu",
+        "image": "luxury_apartment2.jpg",
+        "num_bedrooms": 2,
+        "num_bathrooms": 2,
+        "size": 120,
+        "amenities": "Swimming pool, gym, parking, 24/7 security",
+        "rules": "No smoking, no pets, no loud music after 10pm",
+        "contact_info": "Contact us at 0715 432 109 for more information."
+      }
+    ]
+}
+  
