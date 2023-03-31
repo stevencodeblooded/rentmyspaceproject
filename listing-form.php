@@ -47,8 +47,9 @@ session_start();
                     <label for="location">Location</label>
                     <input type="text" id="location" name="location" required>
 
-                    <label for="image">Upload Image</label>
+                    <label for="image">Select image(s) to upload:</label>
                     <input type="file" id="image" name="image" accept="image/*" required>
+                    <!-- <input type="file" id="image" name="image[]" accept="image/*" multiple required> -->
 
                     <label for="num_bedrooms">Number of bedrooms</label>
                     <input type="number" id="num_bedrooms" name="num_bedrooms" min="1" required>
