@@ -1,5 +1,5 @@
-var currentUrl = window.location.href;
-var navLinks = document.querySelectorAll("nav a");
+let currentUrl = window.location.href;
+let navLinks = document.querySelectorAll("nav a");
 
 navLinks.forEach(function (link) {
     if (link.href === currentUrl) {

@@ -1017,7 +1017,6 @@ select {
   width: fit-content;
 }
 
-
 .form-group input:focus {
   border: 1px solid red;
   outline: none;
@@ -1028,7 +1027,7 @@ select {
   border: 1px solid red;
   outline: none;
   box-shadow: 0 0 10px #666;
-} 
+}
 
 input[type="submit"] {
   background-color: #4caf50;
@@ -1300,8 +1299,20 @@ section#share-space input[type="submit"]:hover {
   font-size: 1.2rem;
   border: none;
   border-radius: 0.5rem;
-  border: 1px solid #cccccc;
+  border: 2px solid #cccccc;
   margin-top: 2.5rem;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.booking input[type="text"]:focus,
+.booking input[type="number"]:focus,
+.booking input[type="file"]:focus,
+.booking input[type="email"]:focus,
+.booking input[type="date"]:focus,
+.booking textarea:focus {
+  border-color: #ea1538;
+  outline: none;
+  
 }
 
 section.booking input[type="submit"] {
@@ -1762,8 +1773,6 @@ section.booking input[type="submit"]:hover {
   cursor: not-allowed;
 }
 
-
-
 /*-------------number links for the listings.php (apartments page)--------------*/
 
 .number-links {
@@ -1772,7 +1781,6 @@ section.booking input[type="submit"]:hover {
   align-items: center;
   margin-top: 60px;
   margin-bottom: 0;
-
 }
 
 .number-links a {
@@ -1800,4 +1808,3 @@ section.booking input[type="submit"]:hover {
   cursor: default;
   font-weight: bold;
 }
-

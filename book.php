@@ -105,6 +105,7 @@ session_start();
    </div>
 
    <script>
+      //cancel booking 
       const cancelBtn = document.getElementById('cancel-booking');
 
       cancelBtn.addEventListener('click', (event) => {
@@ -113,9 +114,7 @@ session_start();
          window.location.href = 'listings.php';
       });
 
-
-
-
+      //date
       // Get the check-in and check-out date inputs
       var checkInDateInput = document.getElementsByName("arrivals")[0];
       var checkOutDateInput = document.getElementsByName("leaving")[0];
