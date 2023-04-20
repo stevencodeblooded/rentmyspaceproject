@@ -161,6 +161,60 @@ $db->close();
                     <label for="location">Location:</label>
                     <input type="text" name="location" id="location" class="form-control">
                 </div>
+
+                <!-- <div class="form-group">
+                    <label for="location">Location:</label>
+                    <select id="location" name="location" id="location" class="form-control">
+                        <option value="">Select City Name</option>
+                        <option value="Nairobi" data-sort="N">Nairobi</option>
+                        <option value="Mombasa" data-sort="M">Mombasa</option>
+                        <option value="Kisumu" data-sort="K">Kisumu</option>
+                        <option value="Nakuru" data-sort="N">Nakuru</option>
+                        <option value="Eldoret" data-sort="E">Eldoret</option>
+                        <option value="Thika" data-sort="T">Thika</option>
+                        <option value="Malindi" data-sort="M">Malindi</option>
+                        <option value="Kitale" data-sort="K">Kitale</option>
+                        <option value="Garissa" data-sort="G">Garissa</option>
+                        <option value="Kakamega" data-sort="K">Kakamega</option>
+                        <option value="Nyeri" data-sort="N">Nyeri</option>
+                        <option value="Machakos" data-sort="M">Machakos</option>
+                        <option value="Ruiru" data-sort="R">Ruiru</option>
+                        <option value="Migori" data-sort="M">Migori</option>
+                        <option value="Embu" data-sort="E">Embu</option>
+                        <option value="Voi" data-sort="V">Voi</option>
+                        <option value="Bungoma" data-sort="B">Bungoma</option>
+                        <option value="Athi River" data-sort="A">Athi River</option>
+                        <option value="Narok" data-sort="N">Narok</option>
+                        <option value="Kericho" data-sort="K">Kericho</option>
+                        <option value="Kilifi" data-sort="K">Kilifi</option>
+                        <option value="Makueni" data-sort="M">Makueni</option>
+                        <option value="Wundanyi" data-sort="W">Wundanyi</option>
+                        <option value="Kitui" data-sort="K">Kitui</option>
+                        <option value="Marsabit" data-sort="M">Marsabit</option>
+                        <option value="Lamu" data-sort="L">Lamu</option>
+                        <option value="Homa Bay" data-sort="H">Homa Bay</option>
+                        <option value="Karuri" data-sort="K">Karuri</option>
+                        <option value="Naivasha" data-sort="N">Naivasha</option>
+                        <option value="Isiolo" data-sort="I">Isiolo</option>
+                        <option value="Kapenguria" data-sort="K">Kapenguria</option>
+                        <option value="Kapsabet" data-sort="K">Kapsabet</option>
+                        <option value="Kabarnet" data-sort="K">Kabarnet</option>
+                        <option value="Nanyuki" data-sort="N">Nanyuki</option>
+                        <option value="Kerugoya" data-sort="K">Kerugoya</option>
+                        <option value="Siaya" data-sort="S">Siaya</option>
+                        <option value="Moyale" data-sort="M">Moyale</option>
+                        <option value="Maralal" data-sort="M">Maralal</option>
+                        <option value="Chuka" data-sort="C">Chuka</option>
+                        <option value="Oyugis" data-sort="O">Oyugis</option>
+                        <option value="Awendo" data-sort="A">Awendo</option>
+                        <option value="Nyamira" data-sort="N">Nyamira</option>
+                        <option value="Mumias" data-sort="M">Mumias</option>
+                        <option value="Kajiado" data-sort="K">Kajiado</option>
+                        <option value="Keroka" data-sort="K">Keroka</option>
+                        <option value="Molo" data-sort="M">Molo</option>
+                    </select>
+                </div> -->
+
                 <div class="form-group">
                     <label for="price-range">Price Range:</label>
                     <select name="price-range" id="price-range" class="form-control">
@@ -275,6 +329,7 @@ $db->close();
         </div>
     </div>
     <script src="script.js"></script>
+
 </body>
 
 </html>

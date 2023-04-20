@@ -1015,7 +1015,7 @@ main.decorate-listings p {
 
 .form-group input[type="text"],
 .form-group input[type="date"],
-select {
+.form-group select {
   width: 100%;
   padding: 0.5rem;
   font-size: 1.1rem;
@@ -1200,6 +1200,7 @@ section#share-space label {
 
 /* Form inputs */
 #listing-form input,
+#listing-form select,
 #listing-form textarea {
   width: 100%;
   padding: 0.5rem;
@@ -1224,6 +1225,12 @@ section#share-space label {
 }
 
 #listing-form textarea:focus {
+  border: 1px solid #666;
+  box-shadow: 0 0 10px #666;
+  outline: none;
+}
+
+#listing-form select:focus {
   border: 1px solid #666;
   box-shadow: 0 0 10px #666;
   outline: none;

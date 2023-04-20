@@ -101,7 +101,8 @@ if (isset($_POST["submit"])) {
         }
 
         .form-group>input,
-        .form-group>textarea {
+        .form-group>textarea,
+        .form-group>select {
             flex-grow: 1;
             margin: 0;
             padding: 10px;
@@ -115,7 +116,8 @@ if (isset($_POST["submit"])) {
         .form-container input[type="text"]:focus,
         .form-container input[type="number"]:focus,
         .form-container input[type="file"]:focus,
-        .form-container textarea:focus {
+        .form-container textarea:focus ,
+        .form-container select:focus{
             border-color: #ea1538;
             outline: none;
         }
@@ -165,9 +167,62 @@ if (isset($_POST["submit"])) {
                 <label>Price:</label>
                 <input type="number" name="price" required>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>Location:</label>
                 <input type="text" name="location" required>
+            </div> -->
+
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <select id="location" name="location" required>
+                    <option value="">Select a city</option>
+                    <option value="Nairobi">Nairobi</option>
+                    <option value="Mombasa">Mombasa</option>
+                    <option value="Kisumu">Kisumu</option>
+                    <option value="Nakuru">Nakuru</option>
+                    <option value="Eldoret">Eldoret</option>
+                    <option value="Thika">Thika</option>
+                    <option value="Malindi">Malindi</option>
+                    <option value="Kitale">Kitale</option>
+                    <option value="Garissa">Garissa</option>
+                    <option value="Kakamega">Kakamega</option>
+                    <option value="Nyeri">Nyeri</option>
+                    <option value="Machakos">Machakos</option>
+                    <option value="Ruiru">Ruiru</option>
+                    <option value="Migori">Migori</option>
+                    <option value="Embu">Embu</option>
+                    <option value="Voi">Voi</option>
+                    <option value="Bungoma">Bungoma</option>
+                    <option value="Athi River">Athi River</option>
+                    <option value="Narok">Narok</option>
+                    <option value="Kericho">Kericho</option>
+                    <option value="Kilifi">Kilifi</option>
+                    <option value="Makueni">Makueni</option>
+                    <option value="Wundanyi">Wundanyi</option>
+                    <option value="Kitui">Kitui</option>
+                    <option value="Marsabit">Marsabit</option>
+                    <option value="Lamu">Lamu</option>
+                    <option value="Homa Bay">Homa Bay</option>
+                    <option value="Karuri">Karuri</option>
+                    <option value="Naivasha">Naivasha</option>
+                    <option value="Isiolo">Isiolo</option>
+                    <option value="Kapenguria">Kapenguria</option>
+                    <option value="Kapsabet">Kapsabet</option>
+                    <option value="Kabarnet">Kabarnet</option>
+                    <option value="Nanyuki">Nanyuki</option>
+                    <option value="Kerugoya">Kerugoya</option>
+                    <option value="Siaya">Siaya</option>
+                    <option value="Moyale">Moyale</option>
+                    <option value="Maralal">Maralal</option>
+                    <option value="Chuka">Chuka</option>
+                    <option value="Oyugis">Oyugis</option>
+                    <option value="Awendo">Awendo</option>
+                    <option value="Nyamira">Nyamira</option>
+                    <option value="Mumias">Mumias</option>
+                    <option value="Kajiado">Kajiado</option>
+                    <option value="Keroka">Keroka</option>
+                    <option value="Molo">Molo</option>
+                </select>
             </div>
 
             <div class="form-group">
