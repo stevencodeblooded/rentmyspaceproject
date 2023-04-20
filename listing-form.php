@@ -31,7 +31,7 @@ session_start();
 
         <main>
             <section id="share-space">
-                <h1><i class="fa-solid fa-star"></i> Sharing is Earning <i class="fa-solid fa-star"></i></h1>
+                <h1><i class="fa-solid fa-star"></i> Sharing is E@rning <i class="fa-solid fa-star"></i></h1>
                 <h2>List Your Apartment Details</h2>
 
                 <form id="listing-form" action="submit_form.php" method="post" enctype="multipart/form-data">
