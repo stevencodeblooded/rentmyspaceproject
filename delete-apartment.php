@@ -21,7 +21,7 @@ $conn = mysqli_connect("localhost", "root", "", "book_db");
 
 // check if the logged in user is the owner of the apartment
 $user_id = $_SESSION['user_id'];
-$query = "SELECT * FROM submit-form WHERE id=$apartment_id AND user_id=$user_id";
+$query = "SELECT * FROM submit_form WHERE id=$apartment_id AND user_id=$user_id";
 $result = mysqli_query($conn, $query);
 
 if (mysqli_num_rows($result) != 1) {

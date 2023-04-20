@@ -9,8 +9,10 @@
     <script src="https://kit.fontawesome.com/6e3eac2e13.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav id="navBar" class="navbar-white">
-        <a style="text-decoration: none" href="index.php"><h2 class="logo">Home <br><span><em>Adventures</em></span></h2></a>
+    <nav id="navBar">
+        <a style="text-decoration: none" href="index.php">
+            <h2 class="logo">Home <br><span><em>Adventures</em></span></h2>
+        </a>
         <ul class="nav-links">
             <li><a href="index.php">Home</a></li>
             <li><a href="listings.php">Apartments</a></li>

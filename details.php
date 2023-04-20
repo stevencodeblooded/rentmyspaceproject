@@ -77,11 +77,11 @@ if (isset($_GET['id'])) {
             <div class="col-9 item-value"><?php echo $apartment['description']; ?></div>
           </div>
           <div class="row">
-            <div class="col-3 item-label">Price per night:</div>
+            <div class="col-3 item-label">Price per night: <i class="fa-solid fa-hand-holding-dollar"></i></div>
             <div class="col-9 item-value"><?php echo $apartment['price']; ?></div>
           </div>
           <div class="row">
-            <div class="col-3 item-label">Location:</div>
+            <div class="col-3 item-label">Location: <i class="fa-sharp fa-solid fa-location-dot"></i></div>
             <div class="col-9 item-value"><?php echo $apartment['location']; ?></div>
           </div>
           <div class="row">
@@ -90,21 +90,23 @@ if (isset($_GET['id'])) {
           </div>
 
           <div class="row-center">
-            <div class="col-3 item-label">Number of Bedrooms:</div>
+            <div class="col-3 item-label"><i class="fa-solid fa-bed"></i> Number of Bedrooms:</div>
             <div class="col-9 item-value"><?php echo $apartment['num_bedrooms']; ?></div>
           </div>
 
           <div class="row-center">
-            <div class="col-3 item-label">Number of Bathrooms:</div>
+            <div class="col-3 item-label"><i class="fa-solid fa-restroom"></i> Number of Bathrooms:</div>
             <div class="col-9 item-value"><?php echo $apartment['num_bathrooms']; ?></div>
           </div>
 
           <div class="row-center">
-            <div class="col-3 item-label">Size:</div>
+            <div class="col-3 item-label"><i class="fa-solid fa-house"></i> Size:</div>
             <div class="col-9 item-value">
               <p><?php echo $apartment['size']; ?> square meters</p>
             </div>
           </div>
+
+          <hr>
 
           <div class="amenities-rules">
             <h2>Amenities:</h2>
@@ -115,14 +117,18 @@ if (isset($_GET['id'])) {
             </ul>
           </div>
 
+          <hr>
+
           <div class="amenities-rules">
             <h2>Rules:</h2>
             <ul>
               <?php foreach (explode(',', $apartment['rules']) as $rules) : ?>
-                <li><i class="fa-solid fa-x"></i><?= $rules ?></li>
+                <li><i class="fa-sharp fa-solid fa-triangle-exclamation"></i><?= $rules ?></li>
               <?php endforeach; ?>
             </ul>
           </div>
+
+          <hr> <br>
 
           <div class="row-center">
             <div class="col-3 item-label">Owner Contact Number</div>
@@ -131,6 +137,7 @@ if (isset($_GET['id'])) {
             </div>
           </div>
 
+          <hr> <br>
 
           <!---The Review form section starts here--->
           <h3 class="head-reviews">What Travelers Are Saying...</h3>
@@ -148,11 +155,11 @@ if (isset($_GET['id'])) {
             return $reviews;
           }
 
-          
+
           // Display reviews with usernames
           // $reviews = get_reviews_with_usernames($apartment['id']);
           $reviews = get_reviews_with_usernames($apartment['id'], $db);
-          
+
 
           foreach ($reviews as $review) {
           ?>
@@ -182,9 +189,9 @@ if (isset($_GET['id'])) {
               <h3>Rate your experience...</h3>
               <form action="submit_review.php" method="post" class="review-form-class">
                 <input type="hidden" name="apartment_id" value="<?php echo $apartment['id']; ?>">
-                <label for="rating">Rating:</label>
+                <label for="rating">Rating:<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></label>
                 <input type="number" step="0.1" min="0" max="5" name="rating" id="rating" required>
-                <label for="comment">Comment:</label>
+                <label for="comment">Comment:<i class="fa-solid fa-comment"></i><i class="fa-solid fa-comment-dots"></i><i class="fa-solid fa-pen"></i></label>
                 <textarea name="comment" id="comment" required></textarea>
 
                 <button id="submit-review" type="submit" name="submit">Submit</button>

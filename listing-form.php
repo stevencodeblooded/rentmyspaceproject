@@ -31,42 +31,41 @@ session_start();
 
         <main>
             <section id="share-space">
-                <h1>Sharing is Earning</h1>
-                <h2>List Your Space</h2>
+                <h1><i class="fa-solid fa-star"></i> Sharing is Earning <i class="fa-solid fa-star"></i></h1>
+                <h2>List Your Apartment Details</h2>
 
                 <form id="listing-form" action="submit_form.php" method="post" enctype="multipart/form-data">
-                    <label for="title">Title</label>
+                    <label for="title">Title:</label>
                     <input type="text" id="title" name="title" required>
 
-                    <label for="description">Description</label>
+                    <label for="description">Description:</label>
                     <textarea id="description" name="description" required></textarea>
 
-                    <label for="price">Price (per night in KSH)</label>
+                    <label for="price">Price (per night in KSH):</label>
                     <input type="number" id="price" name="price" min="1" required>
 
-                    <label for="location">Location</label>
+                    <label for="location">Location:</label>
                     <input type="text" id="location" name="location" required>
 
                     <label for="image">Select image(s) to upload:</label>
                     <input type="file" id="image" name="image" accept="image/*" required>
-                    <!-- <input type="file" id="image" name="image[]" accept="image/*" multiple required> -->
 
-                    <label for="num_bedrooms">Number of bedrooms</label>
+                    <label for="num_bedrooms">Number of bedrooms:</label>
                     <input type="number" id="num_bedrooms" name="num_bedrooms" min="1" required>
 
-                    <label for="num_bathrooms">Number of bathrooms</label>
+                    <label for="num_bathrooms">Number of bathrooms:</label>
                     <input type="number" id="num_bathrooms" name="num_bathrooms" min="1" required>
 
-                    <label for="size">Size (in square feet)</label>
+                    <label for="size">Size (in square feet):</label>
                     <input type="number" id="size" name="size" min="1" required>
 
-                    <label for="amenities">Amenities (comma separated)</label>
+                    <label for="amenities">Amenities (comma separated):</label>
                     <input type="text" id="amenities" name="amenities" required>
 
-                    <label for="rules">Rules (comma separated)</label>
+                    <label for="rules">Rules (comma separated):</label>
                     <input type="text" id="rules" name="rules" required>
 
-                    <label for="contact_info">Contact Information</label>
+                    <label for="contact_info">Contact Information:</label>
                     <input type="text" id="contact_info" name="contact_info" required>
 
                     <!----only show the submit form button after login ------>

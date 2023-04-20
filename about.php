@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <nav id="navBar" class="navbar-white">
+    <nav id="navBar">
         <a style="text-decoration: none" href="index.php">
             <h2 class="logo">Home <br><span><em>Adventures</em></span></h2>
         </a>
