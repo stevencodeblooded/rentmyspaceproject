@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // Connect to the database
-$conn = mysqli_connect("localhost", "root", "", "rent_my_space");
+$conn = mysqli_connect("localhost", "id21172805_stevencodeblooded", "@Cruzah1234", "id21172805_steven");
 
 // Get the apartments listed by the current user
 $user_id = $_SESSION['user_id'];

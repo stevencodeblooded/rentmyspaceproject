@@ -13,7 +13,7 @@ if (isset($_POST['signin'])) {
     }
 
     // Connect to the database
-    $conn = mysqli_connect("localhost", "root", "", "rent_my_space");
+    $conn = mysqli_connect("localhost", "id21172805_stevencodeblooded", "@Cruzah1234", "id21172805_steven");
 
     // Check if the user exists in the database
     $query = "SELECT id FROM users WHERE username='$username' AND password='$password'";

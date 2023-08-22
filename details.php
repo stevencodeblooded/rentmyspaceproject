@@ -4,7 +4,7 @@
 session_start();
 
 // Connect to the database
-$db = new mysqli('localhost', 'root', '', 'rent_my_space');
+$db = new mysqli('localhost', 'id21172805_stevencodeblooded', '@Cruzah1234', 'id21172805_steven');
 
 // Check if the ID parameter is present in the URL
 if (isset($_GET['id'])) {

@@ -5,9 +5,9 @@ session_start();
 
 // Connect to the database
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "rent_my_space";
+$username = "id21172805_stevencodeblooded";
+$password = "@Cruzah1234";
+$dbname = "id21172805_steven";
 
 $db = new mysqli($servername, $username, $password, $dbname);
 

@@ -2,9 +2,9 @@
 
 // PHP script that can be used to connect to the database and insert the form data into the 'contact_form' table
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "rent_my_space";
+$username = "id21172805_stevencodeblooded";
+$password = "@Cruzah1234";
+$dbname = "id21172805_steven";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

@@ -14,7 +14,8 @@ if (!isset($_GET['id'])) {
 }
 
 // Connect to the database
-$conn = mysqli_connect("localhost", "root", "", "rent_my_space");
+
+$conn = mysqli_connect("localhost", "id21172805_stevencodeblooded", "@Cruzah1234", "id21172805_steven");
 
 // Get the apartment details from the database
 $apartment_id = mysqli_real_escape_string($conn, $_GET['id']);

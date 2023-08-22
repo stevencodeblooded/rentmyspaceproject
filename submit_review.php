@@ -12,10 +12,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $user_id = $_SESSION['user_id'];
 
   // Connect to database
+  
   $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "rent_my_space";
+  $username = "id21172805_stevencodeblooded";
+  $password = "@Cruzah1234";
+  $dbname = "id21172805_steven";
 
   $conn = mysqli_connect($servername, $username, $password, $dbname);
   if (!$conn) {

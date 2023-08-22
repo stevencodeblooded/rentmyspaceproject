@@ -13,10 +13,16 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 
 // Connect to the database
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "rent_my_space";
+
+
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "rent_my_space";
+$username = "id21172805_stevencodeblooded";
+$password = "@Cruzah1234";
+$dbname = "id21172805_steven";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
