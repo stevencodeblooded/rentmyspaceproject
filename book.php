@@ -110,20 +110,19 @@ session_start();
 
       cancelBtn.addEventListener('click', (event) => {
          event.preventDefault();
-         console.log('Cancel button clicked!');
          window.location.href = 'listings.php';
       });
 
       //date
       // Get the check-in and check-out date inputs
-      var checkInDateInput = document.getElementsByName("arrivals")[0];
-      var checkOutDateInput = document.getElementsByName("leaving")[0];
+      let checkInDateInput = document.getElementsByName("arrivals")[0];
+      let checkOutDateInput = document.getElementsByName("leaving")[0];
 
       // Add an event listener to the check-in date input
       checkInDateInput.addEventListener("input", function() {
          // Get the check-in and check-out date values
-         var checkInDateValue = new Date(this.value);
-         var checkOutDateValue = new Date(checkOutDateInput.value);
+         let checkInDateValue = new Date(this.value);
+         let checkOutDateValue = new Date(checkOutDateInput.value);
 
          // Disable the check-out date input if its value is before the check-in date value
          if (checkOutDateValue < checkInDateValue) {
@@ -137,8 +136,8 @@ session_start();
       // Add an event listener to the check-out date input
       checkOutDateInput.addEventListener("input", function() {
          // Get the check-in and check-out date values
-         var checkInDateValue = new Date(checkInDateInput.value);
-         var checkOutDateValue = new Date(this.value);
+         let checkInDateValue = new Date(checkInDateInput.value);
+         let checkOutDateValue = new Date(this.value);
 
          // Check if the check-out date value is before the check-in date value
          if (checkOutDateValue < checkInDateValue) {

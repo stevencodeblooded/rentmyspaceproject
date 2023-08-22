@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "book_db";
+$dbname = "rent_my_space";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -66,7 +66,9 @@ mysqli_close($conn);
       <li class="booking-detail">Leaving: <?php echo $row['leaving']; ?></li>
     </ul>
     <a href="payment.php?id=<?php echo $id; ?>" class="btn-payment-proceed">Proceed to Payment</a>
-    <a href="listings.php" class="btn-back-to-listings">Back to Listings</a>
+    <!-- <a href="listings.php" class="btn-back-to-listings">Back to Listings</a> -->
+    <a href="cancel_booking.php?id=<?php echo $id; ?>" class="btn-back-to-listings">Cancel Booking</a>
+
   </div>
 </body>
 </html>

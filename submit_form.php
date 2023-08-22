@@ -17,7 +17,7 @@ $user_id = $_SESSION['user_id'];
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "book_db";
+$dbname = "rent_my_space";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

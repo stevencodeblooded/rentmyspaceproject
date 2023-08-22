@@ -1,5 +1,4 @@
 <?php
-
 // Start the session
 session_start();
 
@@ -7,7 +6,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "book_db";
+$dbname = "rent_my_space";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -28,10 +27,12 @@ if(isset($_POST['send'])) {
   $contact = $_POST['contact'];
   $guests = $_POST['guests'];
   $arrivals = $_POST['arrivals'];
-  $leaving = $_POST['leaving'];
+  $leaving = $_POST['leaving']; 
+  $cancellation_time = date('Y-m-d H:i:s', strtotime($arrivals . ' + 24 hours'));
 
   // Check if apartment is available for selected dates
   $sql = "SELECT * FROM book_details WHERE apartment_id = '$apartment_id'
+          AND status != 'cancelled'
           AND ((arrivals >= '$arrivals' AND arrivals < '$leaving')
           OR (leaving > '$arrivals' AND leaving <= '$leaving')
           OR ('$arrivals' >= arrivals AND '$arrivals' < leaving)
@@ -40,13 +41,7 @@ if(isset($_POST['send'])) {
 
   if (mysqli_num_rows($result) > 0) {
     // Dates overlap, show error message
-    $available_dates = "Available dates for this apartment are:<br>";
-    $sql2 = "SELECT * FROM book_details WHERE apartment_id = '$apartment_id'";
-    $result2 = mysqli_query($conn, $sql2);
-    while($row2 = mysqli_fetch_assoc($result2)) {
-      $available_dates .= $row2['arrivals'] . " to " . $row2['leaving'] . "<br>";
-    }
-    echo "Sorry, this apartment is not available for the selected dates.<br>$available_dates";
+    echo '<script>alert("Sorry, the selected dates are already booked. Please try some other dates."); window.location.href="book.php?apartment_id='.$apartment_id.'";</script>';
     exit();
   }
 
@@ -60,9 +55,8 @@ if(isset($_POST['send'])) {
   $user_id = $_SESSION['user_id'];
 
   // Insert booking into database
-  $sql = "INSERT INTO book_details (user_id, apartment_id, name, email, phone, address, contact, guests, arrivals, leaving)
-      VALUES ('$user_id', '$apartment_id', '$name', '$email', '$phone', '$address', '$contact', '$guests', '$arrivals', '$leaving')";
-
+  $sql = "INSERT INTO book_details (user_id, apartment_id, name, email, phone, address, contact, guests, arrivals, leaving, cancellation_time)
+      VALUES ('$user_id', '$apartment_id', '$name', '$email', '$phone', '$address', '$contact', '$guests', '$arrivals', '$leaving', '$cancellation_time')";
   if (mysqli_query($conn, $sql)) {
     $id = mysqli_insert_id($conn);
     $book_summary_url = 'book_summary.php?id=' . $id;
@@ -76,4 +70,3 @@ if(isset($_POST['send'])) {
   // Close database connection
   mysqli_close($conn);
 }
-?>

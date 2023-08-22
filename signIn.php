@@ -13,20 +13,20 @@ if (isset($_POST['signin'])) {
     }
 
     // Connect to the database
-    $conn = mysqli_connect("localhost", "root", "", "book_db");
+    $conn = mysqli_connect("localhost", "root", "", "rent_my_space");
 
     // Check if the user exists in the database
-    $query = "SELECT user_id FROM users WHERE username='$username' AND password='$password'";
+    $query = "SELECT id FROM users WHERE username='$username' AND password='$password'";
 
     $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) > 0) {
         // Set the user ID in the session variable
         $user = mysqli_fetch_assoc($result);
-        $_SESSION['user_id'] = $user['user_id'];
+        $_SESSION['user_id'] = $user['id'];
 
         // Check if the user has any apartments listed in the database
-        $query = "SELECT COUNT(*) FROM submit_form WHERE user_id = '$user[user_id]'";
+        $query = "SELECT COUNT(*) FROM submit_form WHERE user_id = '$user[id]'";
         $result = mysqli_query($conn, $query);
 
         $row = mysqli_fetch_row($result);
@@ -47,6 +47,5 @@ if (isset($_POST['signin'])) {
         echo "<script>alert('Please Try Again, Incorrect username or password'); window.location.href='index.php';</script>";
     }
 }
-
 
 ?>

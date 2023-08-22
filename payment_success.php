@@ -11,10 +11,12 @@
 
 <body>
     <div class="end-result-message">
-        <h1>Payment Successful!</h1>
+        <h1>Payment Successful</h1><i class="fa-solid fa-thumbs-up"></i>
         <p>Thank you for your payment. Your transaction has been completed and your booking is successful.</p>
 
-        <a href="index.php" class="btn-back-to-listings">Exit</a>
+        <!-- <a href="index.php" class="btn-back-to-listings">Exit</a> -->
+        <a href="view_bookings.php" class="btn-back-to-listings">View Bookings</a>
+
     </div>
 </body>
 

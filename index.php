@@ -52,6 +52,14 @@ if (isset($_POST['signin'])) {
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
 
+                <?php
+                // Check if user is logged in
+                if (isset($_SESSION['user_id'])) {
+                    // User is logged in, display link to view_booking.php
+                    echo '<li><a href="view_bookings.php">My Bookings</a></li>';
+                }
+                ?>
+
                 <!-- Display the login button if the user is not logged in -->
                 <?php
                 if (!isset($_SESSION['user_id'])) {

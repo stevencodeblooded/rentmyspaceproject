@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $servername = "localhost";
   $username = "root";
   $password = "";
-  $dbname = "book_db";
+  $dbname = "rent_my_space";
 
   $conn = mysqli_connect($servername, $username, $password, $dbname);
   if (!$conn) {
@@ -31,17 +31,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       mysqli_stmt_close($stmt);
 
       // Select username from users table
-      $sql = "SELECT username FROM users WHERE user_id = ?";
+      $sql = "SELECT username FROM users WHERE id = ?";
       if ($stmt = mysqli_prepare($conn, $sql)) {
         mysqli_stmt_bind_param($stmt, "i", $user_id);
         mysqli_stmt_execute($stmt);
-        mysqli_stmt_bind_result($stmt, $username);
-        mysqli_stmt_fetch($stmt);
-        mysqli_stmt_close($stmt);
 
-        // Display success message with username
-        echo "<script>alert('Thank you, $username, for your review!')</script>";
-        echo "<script>window.location.href='details.php?id=$apartment_id#review-section'</script>";
+        // Check for errors
+        if(mysqli_stmt_error($stmt)) {
+          echo "Error: " . mysqli_stmt_error($stmt);
+        } else {
+          mysqli_stmt_bind_result($stmt, $username);
+          mysqli_stmt_fetch($stmt);
+          mysqli_stmt_close($stmt);
+
+          // Display success message with username
+          echo "<script>alert('Thank you, $username, for your review!')</script>";
+          echo "<script>window.location.href='details.php?id=$apartment_id#review-section'</script>";
+        }
       } else {
         echo "Something went wrong. Please try again later.";
       }
@@ -54,4 +60,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   header("Location: details.php?id=$apartment_id#review-section");
   exit();
 }
-?>

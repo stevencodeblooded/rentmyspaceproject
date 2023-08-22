@@ -7,7 +7,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "book_db";
+$dbname = "rent_my_space";
 
 $db = new mysqli($servername, $username, $password, $dbname);
 
@@ -147,6 +147,13 @@ $db->close();
             <li><a href="index.php">Home</a></li>
             <li><a href="listings.php">Apartments</a></li>
             <li><a href="about.php">About</a></li>
+            <?php
+            // Check if user is logged in
+            if (isset($_SESSION['user_id'])) {
+                // User is logged in, display link to view_booking.php
+                echo '<li><a href="view_bookings.php">My Bookings</a></li>';
+            }
+            ?>
             <li><a href="contact.php">Contact</a></li>
         </ul>
     </nav>

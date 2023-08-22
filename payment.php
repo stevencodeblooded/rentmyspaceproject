@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "book_db";
+$dbname = "rent_my_space";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 

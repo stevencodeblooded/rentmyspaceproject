@@ -4,7 +4,7 @@
 session_start();
 
 // Connect to the database
-$db = new mysqli('localhost', 'root', '', 'book_db');
+$db = new mysqli('localhost', 'root', '', 'rent_my_space');
 
 // Check if the ID parameter is present in the URL
 if (isset($_GET['id'])) {
@@ -143,48 +143,59 @@ if (isset($_GET['id'])) {
           <h3 class="head-reviews">What Travelers Are Saying...</h3>
           <?php
 
-          function get_reviews_with_usernames($apartment_id, $db)
+
+          function get_reviews_with_usernames($apartment_id, $conn)
           {
-            $query = "SELECT r.*, u.username FROM reviews r JOIN users u ON r.user_id = u.user_id WHERE r.apartment_id = ? ORDER BY r.created_at DESC";
-            $statement = $db->prepare($query);
-            $statement->bind_param('i', $apartment_id);
-            $statement->execute();
-            $result = $statement->get_result();
-            $reviews = $result->fetch_all(MYSQLI_ASSOC);
-            $statement->close();
+            $query = "SELECT r.*, u.username FROM reviews AS r INNER JOIN users AS u ON r.user_id = u.id WHERE apartment_id = ?";
+            $stmt = $conn->prepare($query);
+            $stmt->bind_param("i", $apartment_id);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            if ($result->num_rows === 0) {
+              return array();
+            }
+
+            $reviews = array();
+            while ($row = $result->fetch_assoc()) {
+              $reviews[] = $row;
+            }
+
             return $reviews;
           }
 
-
           // Display reviews with usernames
-          // $reviews = get_reviews_with_usernames($apartment['id']);
           $reviews = get_reviews_with_usernames($apartment['id'], $db);
 
-
-          foreach ($reviews as $review) {
+          if (!empty($reviews)) {
+            foreach ($reviews as $review) {
           ?>
-            <div class="review-item" id="review-section">
-              <div class="review-header">
-                <div class="review-user-info">
-                  <i class="fas fa-user"></i>
-                  <span class="review-username"><?php echo $review['username']; ?></span>
+              <div class="review-item" id="review-section">
+                <div class="review-header">
+                  <div class="review-user-info">
+                    <i class="fas fa-user"></i>
+                    <span class="review-username"><?php echo $review['username']; ?></span>
+                  </div>
+                  <div class="review-rating">
+                    <i class="fas fa-star"></i>
+                    <span><?php echo $review['rating']; ?></span>
+                  </div>
                 </div>
-                <div class="review-rating">
-                  <i class="fas fa-star"></i>
-                  <span><?php echo $review['rating']; ?></span>
-                </div>
+                <p class="review-text"><?php echo $review['comment']; ?></p>
               </div>
-              <p class="review-text"><?php echo $review['comment']; ?></p>
-            </div>
-          <?php
+            <?php
+            }
+          } else {
+            echo "No reviews found.";
           }
+          
 
           // Check if the user is logged in
           if (!isset($_SESSION['user_id'])) {
             echo "<p><big>**You must be logged in to submit a review**</big></p>";
           } else {
             // Display the review form
-          ?>
+            ?>
             <div class="review-form">
               <h3>Rate your experience...</h3>
               <form action="submit_review.php" method="post" class="review-form-class">

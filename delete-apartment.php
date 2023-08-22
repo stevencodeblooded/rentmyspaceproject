@@ -17,7 +17,7 @@ if (!isset($_GET['id'])) {
 $apartment_id = $_GET['id'];
 
 // connect to the database
-$conn = mysqli_connect("localhost", "root", "", "book_db");
+$conn = mysqli_connect("localhost", "root", "", "rent_my_space");
 
 // check if the logged in user is the owner of the apartment
 $user_id = $_SESSION['user_id'];
